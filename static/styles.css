@@ -1,0 +1,115 @@
+
+        /* Base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            animation: slideUp 0.7s ease-in-out;
+        }
+
+        input, select {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border: 2px solid #43a047;
+        }
+
+        button {
+            width: 80%;
+            padding: 12px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background: #43a047;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #66bb6a;
+            transform: scale(1.05);
+        }
+
+        #progress-container {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #status-info {
+            margin-top: 20px;
+            font-size: 1em;
+            text-align: left;
+        }
+
+        progress {
+            width: 80%;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            appearance: none;
+        }
+
+        progress::-webkit-progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        progress::-webkit-progress-value {
+            background: #43a047;
+        }
+
+        progress::-moz-progress-bar {
+            background: #43a047;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
